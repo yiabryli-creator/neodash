@@ -3,7 +3,12 @@
   publish = "dist"
   ignore = "git diff --quiet HEAD^ HEAD ./"
 
+# Redirect all paths to index.html (Single Page Application)
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+
+# Environment variables (опционально)
+[build.environment]
+  CI = "false"
